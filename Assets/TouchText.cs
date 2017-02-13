@@ -49,7 +49,7 @@ public class TouchText : MonoBehaviour {
 
             //pos（タッチ座標）をhalfWidth（画面の横幅の半分）と比較し、左右を認識させる
             //タッチ座標が半分より少なかったとき（左だったとき）
-            if (pos < halfWidth && "LeftFripperTag" == tag){
+            if ((pos < halfWidth && "LeftFripperTag" == tag) || (pos >= halfWidth && "RightFripperTag" == tag)){
 
                 //「 `myTouch`（自作のタッチ関連の箱）の `phase` (タッチの状態？)が 
                 //`TouchPhase.Began` (既設のタッチ機能、その中の『タッチされた状態』 )と
